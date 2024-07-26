@@ -4,6 +4,7 @@
 import tkinter as tk
 import tkinter.filedialog as filedialog
 import tkinter.simpledialog as simpledialog
+import tkinter.messagebox as messagebox
 import random
 import io
 import builtins
@@ -70,7 +71,11 @@ class Pyzzle:
     def load_puzzle(self):
         filename = filedialog.askopenfilename(defaultextension=".pyzzle",initialdir="./assets")
         if filename:
-            description = parse_pyzzle_file(filename)
+            try:
+                description = parse_pyzzle_file(filename)
+            except IOError as e:
+                messagebox.showerror("Error!", f"Failed to read file: {e}")
+                return
             self.instructions["text"] = description.instructions
             self.puzzle_area.set_pieces(description.code)
 
@@ -241,6 +246,11 @@ def parse_pyzzle_file(filename):
         instr_end = content.find(INSTRUCTIONS_MARKER + END_MARKER)
         code_start = content.find(CODE_MARKER + START_MARKER)
         code_end = content.find(CODE_MARKER + END_MARKER)
+        if (
+            instr_start < 0 or instr_end < 0 or code_start < 0 or code_start < 0) or (
+            code_start < instr_end or instr_end < instr_start or code_end < code_start
+        ):
+            raise IOError("Invalid file structure")
         instructions = content[instr_start+len(INSTRUCTIONS_MARKER + START_MARKER):instr_end].strip()
         code = content[code_start+len(CODE_MARKER + START_MARKER):code_end].strip()
         return PyzzleDescription(instructions, code)
