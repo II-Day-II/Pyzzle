@@ -1,0 +1,17 @@
+PYZZLE_INSTRUCTIONS_START
+Skriv ett program som beräknar fakultet för ett tal användaren angivit.
+(Fakultet är definierat för positiva heltal som produkten av talet och alla lägre positiva heltal.
+Ex. 5! = 5 * 4 * 3 * 2 * 1 = 120)
+PYZZLE_INSTRUCTIONS_END
+PYZZLE_CODE_START
+heltal = int(input("Ange ett tal: "))
+fakultet = 1
+while heltal > 0:
+    fakultet *= heltal
+    heltal -= 1
+print(fakultet)
+
+fakultet = heltal * heltal
+
+print(heltal)
+PYZZLE_CODE_END

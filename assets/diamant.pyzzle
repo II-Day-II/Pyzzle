@@ -1,0 +1,22 @@
+PYZZLE_INSTRUCTIONS_START
+Skriv ett program som skriver ut följande:
+    -
+   ---
+  -----
+ -------
+  -----
+   ---
+    -
+PYZZLE_INSTRUCTIONS_END
+PYZZLE_CODE_START
+rad = 0
+riktning = 1
+while rad >= 0:
+    tomrum = " " * (3 - rad)
+    antal_streck = 2 * rad + 1
+    utskrift = tomrum + "-" * antal_streck
+    print(utskrift)
+    if rad == 3:
+        riktning *= -1
+    rad += riktning
+PYZZLE_CODE_END
