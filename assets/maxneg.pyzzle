@@ -5,15 +5,19 @@ Om inga negativa tal har matats in
 så skrivs 0 ut.
 PYZZLE_INSTRUCTIONS_END
 PYZZLE_CODE_START
-max_neg_tal = -float("inf")
-tal_string = input("Ange ett tal: ")
-while tal_string != "":
-    tal = float(tal_string)
-    if tal < 0 and tal > max_neg_tal:
-        max_neg_tal = tal
-    tal_string = input("Ange ett tal: ")
-if max_neg_tal == -float("inf"):
-    print(0)
+antal = int(input("Hur många tal vill du mata in? "))
+snt = 0
+i = 0
+while i < antal:
+    tal = int(input("Mata in ett tal: "))
+    if tal < 0:
+        if snt == 0:
+            snt = tal
+        elif tal > snt:
+            snt = tal
+    i += 1
+if snt < 0:
+    print("Största negativa tal är:", snt)
 else:
-    print(max_neg_tal)
+    print(0)
 PYZZLE_CODE_END

@@ -3,16 +3,20 @@ Skriv ett program som skriver ut
 alla primtal från 2 till 100
 PYZZLE_INSTRUCTIONS_END
 PYZZLE_CODE_START
-kanske_primtal = 2
-while kanske_primtal < 100:
-    primtal = True
-    lägre_tal = 2
-    while lägre_tal <= kanske_primtal / 2:
-        if kanske_primtal % lägre_tal == 0:
-            primtal = False
+nr = 2
+while nr <= 100:
+    nr_prime = True
+    divisor = nr - 1
+    divisor = nr
+    while divisor > 1:
+        if nr % divisor == 0:
+            nr_prime = False
             break
-        lägre_tal += 1
-    if primtal:
-        print(kanske_primtal)
-    kanske_primtal += 1
+        divisor = divisor - 1
+    nr += 1
+    if not nr_prime:
+    if nr_prime == True:
+        print(nr, end=", ")
+    nr = nr + 1
+
 PYZZLE_CODE_END

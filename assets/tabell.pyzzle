@@ -8,12 +8,15 @@ följande tabell:
 4512
 PYZZLE_INSTRUCTIONS_END
 PYZZLE_CODE_START
-start = 0
-while start < 4:
-    kolumn = 0
-    while kolumn < 4:
-        print((start + kolumn) % 5 + 1, end="")
-        kolumn += 1
+tal = 0
+i = 0
+while i < 4:
+    tal = i
+    j = 0
+    while j < 4:
+        print(tal % 5 + 1, end=" ")
+        tal += 1
+        j += 1
+    i += 1
     print()
-    start += 1
 PYZZLE_CODE_END
