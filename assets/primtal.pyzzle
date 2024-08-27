@@ -1,0 +1,18 @@
+PYZZLE_INSTRUCTIONS_START
+Skriv ett program som skriver ut 
+alla primtal från 2 till 100
+PYZZLE_INSTRUCTIONS_END
+PYZZLE_CODE_START
+kanske_primtal = 2
+while kanske_primtal < 100:
+    primtal = True
+    lägre_tal = 2
+    while lägre_tal <= kanske_primtal / 2:
+        if kanske_primtal % lägre_tal == 0:
+            primtal = False
+            break
+        lägre_tal += 1
+    if primtal:
+        print(kanske_primtal)
+    kanske_primtal += 1
+PYZZLE_CODE_END

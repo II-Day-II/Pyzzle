@@ -1,0 +1,19 @@
+PYZZLE_INSTRUCTIONS_START
+Skriv ett program som frågar efter ett antal tal 
+och skriver ut det största negativa talet.
+Om inga negativa tal har matats in
+så skrivs 0 ut.
+PYZZLE_INSTRUCTIONS_END
+PYZZLE_CODE_START
+max_neg_tal = -float("inf")
+tal_string = input("Ange ett tal: ")
+while tal_string != "":
+    tal = float(tal_string)
+    if tal < 0 and tal > max_neg_tal:
+        max_neg_tal = tal
+    tal_string = input("Ange ett tal: ")
+if max_neg_tal == -float("inf"):
+    print(0)
+else:
+    print(max_neg_tal)
+PYZZLE_CODE_END

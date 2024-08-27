@@ -1,0 +1,21 @@
+PYZZLE_INSTRUCTIONS_START
+Skriv ett program som skriver ut följande:
+ -------
+  -----
+   ---
+    -
+   ---
+  -----
+ -------
+PYZZLE_INSTRUCTIONS_END
+PYZZLE_CODE_START
+antal_streck = 7
+riktning = -1
+while antal_streck <= 7:
+    tomrum = " " * (3 - antal_streck // 2)
+    streck = "-" * antal_streck
+    print(tomrum + streck)
+    if antal_streck == 1:
+        riktning *= -1
+    antal_streck += 2 * riktning
+PYZZLE_CODE_END

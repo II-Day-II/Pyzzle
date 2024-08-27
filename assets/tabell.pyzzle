@@ -1,0 +1,19 @@
+PYZZLE_INSTRUCTIONS_START
+Skriv ett program som skriver ut 
+följande tabell:
+
+1234
+2345
+3451
+4512
+PYZZLE_INSTRUCTIONS_END
+PYZZLE_CODE_START
+start = 0
+while start < 4:
+    kolumn = 0
+    while kolumn < 4:
+        print((start + kolumn) % 5 + 1, end="")
+        kolumn += 1
+    print()
+    start += 1
+PYZZLE_CODE_END

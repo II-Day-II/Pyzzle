@@ -1,0 +1,16 @@
+PYZZLE_INSTRUCTIONS_START
+Skriv ett program som frågar efter ett antal 
+tal och sedan beräknar medelvärdet av dem.
+PYZZLE_INSTRUCTIONS_END
+PYZZLE_CODE_START
+summa = 0
+antal = 0
+tal_string = input("Ange ett tal: ")
+while tal_string != "":
+    tal = float(tal_string)
+    summa += tal
+    antal += 1
+    tal_string = input("Ange ett tal: ")
+medelvärde = summa / antal
+print(medelvärde)
+PYZZLE_CODE_END

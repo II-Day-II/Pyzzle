@@ -1,0 +1,19 @@
+PYZZLE_INSTRUCTIONS_START
+Skriv ett program som frågar efter ett antal tal 
+och skriver ut det minsta positiva talet.
+Om inga positiva tal har matats in
+så skrivs 0 ut.
+PYZZLE_INSTRUCTIONS_END
+PYZZLE_CODE_START
+min_pos_tal = float("inf")
+tal_string = input("Ange ett tal: ")
+while tal_string != "":
+    tal = float(tal_string)
+    if tal > 0 and tal < min_pos_tal:
+        min_pos_tal = tal
+    tal_string = input("Ange ett tal: ")
+if min_pos_tal == float("inf"):
+    print(0)
+else:
+    print(min_pos_tal)
+PYZZLE_CODE_END
