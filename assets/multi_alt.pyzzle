@@ -1,0 +1,18 @@
+PYZZLE_INSTRUCTIONS_START
+Skriv ett program som skriver ut 
+multiplikationstabellen för 1 till 5.  
+PYZZLE_INSTRUCTIONS_END
+PYZZLE_CODE_START
+j = 1
+while j <= 5:
+    i = 1
+    while i <= 5:
+        print(i*j, end=" ")
+        i += 1
+    print()
+    j += 1
+j = 1
+    print(5*i)
+    print(j*5)
+    j = j * 2
+PYZZLE_CODE_END

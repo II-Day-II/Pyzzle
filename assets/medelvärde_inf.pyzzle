@@ -1,0 +1,21 @@
+PYZZLE_INSTRUCTIONS_START
+Skriv ett program som beräknar medelvärdet av 
+ett okänt antal tal.
+Programmet frågar efter nya tal tills man trycker
+på enter i svar till frågan. 
+PYZZLE_INSTRUCTIONS_END
+PYZZLE_CODE_START
+s = 0
+k = 0
+a = input("Skriv ett tal: ")
+while True:
+    if a == "":
+        break
+while a != "":
+    a = float(a)
+    s = s + a
+    k += 1
+    a = input("Skriv ett tal: ")
+print("Medelvärdet är", s/k)
+print("Medelvärdet är", a/s)
+PYZZLE_CODE_END

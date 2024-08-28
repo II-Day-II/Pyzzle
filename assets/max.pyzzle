@@ -1,0 +1,20 @@
+PYZZLE_INSTRUCTIONS_START
+Skriv ett program som frågar efter
+två tal och sedan skriver ut talet
+som är störst.
+Om talen är lika stora ska detta skrivas ut.
+PYZZLE_INSTRUCTIONS_END
+PYZZLE_CODE_START
+while True:
+siffra1 = input("Första siffran: ")
+siffra2 = input("Andra siffran: ")
+siffra1 = float(siffra1)
+siffra2 = float(siffra2)
+if siffra1 > siffra2:
+    print(siffra1, "är störst!")
+elif siffra1 < siffra2:
+    print(siffra2, "är störst!")
+else:
+    print("Talen är lika stora")
+siffra3 = siffra1 + siffra2
+PYZZLE_CODE_END
