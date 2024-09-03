@@ -1,0 +1,15 @@
+PYZZLE_INSTRUCTIONS_START
+Skriv ett program som ber användaren mata in ett tal 
+i binärt format och sedan skriver ut talet i 
+decimal form. 
+Ex. 1101 -> 13
+PYZZLE_INSTRUCTIONS_END
+PYZZLE_CODE_START
+binTal = input("Mata in ett binärt tal: ")
+pwr = len(binTal) - 1
+decTal = 0
+for t in binTal:
+    decTal += int(t) * (2 ** pwr)
+    pwr -= 1
+print(decTal)
+PYZZLE_CODE_END
